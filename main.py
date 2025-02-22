@@ -57,7 +57,7 @@ class Item(BaseModel):
 
 @app.post("/get-coordinates")
 async def location_coordinates(item: Item):
-    conversation_id = item.conversation_id or "default"
+    conversation_id = "default"
     map_bot = MapInfoBot.get_instance(
         conversation_id=conversation_id,
         tools=tools,
