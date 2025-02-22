@@ -46,8 +46,8 @@
 
 from google.generativeai import GenerativeModel
 import google.generativeai as genai
-from .mapServices import get_coordinates, get_nearby_places
-from .dbCentric import fetch_hotels, fetch_events
+from services.mapServices import get_coordinates, get_nearby_places
+from services.dbCentric import fetch_hotels, fetch_events
 from dotenv import load_dotenv
 import os
 load_dotenv()

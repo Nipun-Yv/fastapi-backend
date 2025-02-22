@@ -1,7 +1,7 @@
 from fastapi import FastAPI,UploadFile,File
 from fastapi.middleware.cors import CORSMiddleware
-from .services.MapInfoBot import MapInfoBot
-from .services.promptsSpace import system_instruction,tools
+from services.MapInfoBot import MapInfoBot
+from services.promptsSpace import system_instruction,tools
 from pydantic import BaseModel
 import openai
 from io import BytesIO
