@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.env
+*.venv
+env/
+venv/
+ENV/
+VENV/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+dist/
+build/
+
+# Environment variables
+.env
+
+# VSCode settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Uvicorn reload
+*.reload
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pytest
+.pytest_cache/
+
+# FastAPI static/uploads (if applicable)
+static/
+uploads/
+
+# Render deploy cache (if any specific)
+.cache/
+
+# Database files (if using SQLite)
+*.db
+*.sqlite3
