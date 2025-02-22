@@ -56,14 +56,22 @@ class Item(BaseModel):
     text: str
 
 
-@app.post("/get-coordinates")
 async def location_coordinates(item: Item):
-    map_bot = MapInfoBot(tools=tools, instruction=system_instruction, model_name="gemini-2.0-flash")
+
+    conversation_id = item.conversation_id or "default"
+    map_bot = MapInfoBot.get_instance(
+        conversation_id=conversation_id,
+        tools=tools,
+        instruction=system_instruction,
+        model_name="gemini-2.0-flash"
+    )
+    
     result = await map_bot.send_message(item.text)
     print(result)
+    
     if isinstance(result, str):
         return {"message": result, "result": None}
-    return {"message": None, "result": result} 
+    return {"message": None, "result": result}
 
 @app.get("/api/hello")
 async def read_root():
