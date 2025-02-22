@@ -55,9 +55,8 @@ async def transcribe_audio(file: UploadFile = File(...)):
 class Item(BaseModel):
     text: str
 
-
+@app.post("/get-coordinates")
 async def location_coordinates(item: Item):
-
     conversation_id = item.conversation_id or "default"
     map_bot = MapInfoBot.get_instance(
         conversation_id=conversation_id,
